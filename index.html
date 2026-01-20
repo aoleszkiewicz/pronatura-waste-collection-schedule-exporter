@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonogram Wywozu Odpadów - ProNatura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">♻️</div>
+            <h1>Eksport Harmonogramu</h1>
+            <p>Pobierz harmonogram odbioru odpadów bezpośrednio do swojego kalendarza.</p>
+        </header>
+
+        <main class="card">
+            <div class="form-group">
+                <label for="street-input">Ulica</label>
+                <div class="custom-select-wrapper" id="street-wrapper">
+                    <input type="text" id="street-input" class="autocomplete-input" placeholder="Zacznij wpisywać nazwę ulicy..." autocomplete="off">
+                    <div id="street-list" class="autocomplete-list"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address-input">Numer domu</label>
+                <div class="custom-select-wrapper" id="address-wrapper">
+                    <input type="text" id="address-input" class="autocomplete-input" placeholder="Wybierz numer..." autocomplete="off" disabled>
+                    <div id="address-list" class="autocomplete-list"></div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="download-btn" class="btn btn-primary" disabled>
+                    <span>Pobierz dla Google Calendar (.ics)</span>
+                </button>
+            </div>
+            
+            <div id="status-message" class="status-message"></div>
+
+            <div class="instructions">
+                <h3>Jak zaimportować do Google Calendar?</h3>
+                <ol>
+                    <li>Pobierz plik <b>.ics</b> powyżej.</li>
+                    <li>Otwórz <a href="https://calendar.google.com" target="_blank">Kalendarz Google</a> na komputerze.</li>
+                    <li>Kliknij ikonę <b>Ustawienia (⚙️)</b> > <b>Ustawienia</b>.</li>
+                    <li>Z menu po lewej wybierz <b>Importowanie i eksportowanie</b>.</li>
+                    <li>Wybierz pobrany plik i kliknij <b>Importuj</b>.</li>
+                </ol>
+            </div>
+        </main>
+
+        <footer>
+            <div class="social-promo">
+                <p>Podoba Ci się ten projekt? Zapraszam do kontaktu!</p>
+                <div class="social-links">
+                    <a href="https://github.com/aoleszkiewicz" target="_blank" rel="noopener noreferrer" class="social-btn github">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aoleszkiewicz/" target="_blank" rel="noopener noreferrer" class="social-btn linkedin">
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-credits">
+                <p>&copy; 2026 Eksport Harmonogramu ProNatura. Stworzone przez <b>aoleszkiewicz</b>.</p>
+                <p>Dane pochodzą z serwisu ProNatura Bydgoszcz.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
